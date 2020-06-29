@@ -2,5 +2,14 @@
   "name": "reactmemory",
   "version": "0.0.1",
   "author": "jankuca",
-  "licence": "MIT"
+  "licence": "MIT",
+  "scripts": {
+    "prepublish": "rm -rf dist && babel src -d dist"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.10.3",
+    "@babel/core": "7.10.3",
+    "@babel/plugin-transform-flow-strip-types": "7.10.1",
+    "@babel/preset-env": "7.10.3"
+  }
 }
