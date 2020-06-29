@@ -1,0 +1,8 @@
+[include]
+src
+
+[ignore]
+/dist/.*
+
+[options]
+include_warnings=true
