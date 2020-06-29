@@ -1,0 +1,26 @@
+declare module 'reactmemory' {
+  declare type RootMemoryNode = {
+    type: 'root',
+    textContent: string,
+    children: Array<MemoryNode>,
+    _rootContainer?: $Call<
+      $PropertyType<ReactReconcilerInst, 'createContainer'>,
+      any,
+      false
+    >,
+  }
+
+  declare type ReactFiberLane = number
+
+  declare type ReactMemory = {
+    render: (
+      reactElement: React$Element<any>,
+      elementNode: RootMemoryNode,
+      callback?: () => void
+    ) => ReactFiberLane,
+
+    createRoot: () => RootMemoryNode,
+  }
+
+  declare export default ReactMemory
+}

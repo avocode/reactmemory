@@ -3,10 +3,14 @@
   "version": "0.0.1",
   "author": "jankuca",
   "licence": "MIT",
+  "main": "dist/react-memory",
   "scripts": {
     "flow": "flow",
     "prepublish": "rm -rf dist && babel src -d dist && cp -R types/* dist/",
     "prettier": "prettier -c src types"
+  },
+  "dependencies": {
+    "react-reconciler": "0.25.1"
   },
   "devDependencies": {
     "@babel/cli": "7.10.3",
